@@ -1,22 +1,22 @@
-ravend-rpc.js
+myntd-rpc.js
 ===============
 
-A client library to connect to Ravencoin RPC in JavaScript.
+A client library to connect to Mynt RPC in JavaScript.
 
 ## Get Started
 
-ravend-rpc.js runs on [node](http://nodejs.org/)
+myntd-rpc.js runs on [node](http://nodejs.org/)
 
 ```bash
-npm install ravend-rpc
+npm install myntd-rpc
 ```
 
 ## Examples
 
 ```javascript
 var run = function() {
-  var ravencore = require('ravencore');
-  var RpcClient = require('ravend-rpc');
+  var myntcore = require('myntcore');
+  var RpcClient = require('myntd-rpc');
 
   var config = {
     protocol: 'http',
@@ -52,7 +52,7 @@ var run = function() {
         }
 
         rawtxs.map(function (rawtx) {
-          var tx = new ravencore.Transaction(rawtx.result);
+          var tx = new myntcore.Transaction(rawtx.result);
           console.log('\n\n\n' + tx.id + ':', tx.toObject());
         });
 
